@@ -13,7 +13,7 @@ services:
       - 3306:3306
 
   myapp-main:
-    image: spring_docker:latest
+    image: spring_docker:1.0
     restart: on-failure
     depends_on:
       - myapp-mysql

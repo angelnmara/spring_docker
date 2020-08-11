@@ -1,4 +1,9 @@
+FROM maven:latest AS build 
+COPY src /home/app/src
+copy pom.xml /home/app
+RUN mvn -f /home/app/pom.xml clean package
+
 FROM openjdk:14
-COPY "./target/CrudSpringAea_docker-1.0.jar" "app.jar"
+COPY --from=build "home/app/target/CrudSpringAea_docker-1.0.jar" "app.jar"
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]

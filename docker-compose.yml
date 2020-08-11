@@ -25,3 +25,5 @@ services:
       - DATABASE_PASSWORD=mysql
       - DATABASE_NAME=test
       - DATABASE_PORT=3306
+   volumes:
+      - /home/hans/Escritorio/git_proyect/bd_spring_docker:/var/lib/mysql

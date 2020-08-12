@@ -31,8 +31,6 @@ services:
       - DATABASE_PASSWORD=mysql
       - DATABASE_NAME=test
       - DATABASE_PORT=3306
-    links:
-      - myapp-mysql:mysql
    
 networks:
   employee-mysql: 

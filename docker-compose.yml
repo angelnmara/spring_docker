@@ -17,7 +17,7 @@ services:
       - employee-mysql
       
   myapp-main:
-    image: spring_docker:1.0
+    image: hansleolml/spring_docker:2.0
     networks:
       - employee-mysql
     restart: on-failure
